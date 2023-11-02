@@ -63,7 +63,8 @@ while(seleccionarProductos != 0){
         break;
 
         default:
-            break;
+            alert("Por favor, elegí una opción valida");
+        break;
     }
     seleccionarProductos = parseInt(prompt("1 - Buzo $35000 2 - Remera $17000 3 - Short $11000 4 - Jean $25000 5 - Gorra $6000"));
 
