@@ -4,21 +4,34 @@
     box-sizing: border-box;
 }
 
-#sectionProductos{
+#divContenedor{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    margin-top: .625rem;
-
+    margin: 2.1875rem;
+    
+    /* margin-top: 1.25rem;
+    margin-left: 1.25rem;
+    margin-bottom: .9375rem; */
 }
 
-.card{
+.numeroCarrito{
+    background-color: black;
+    color: white;
+    padding: 0 .25rem;
+    border-radius: .25rem;
+}
+
+/* .card{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     gap: 3px;
     margin: .3125rem;
-}
+    width: 200px;
+    margin-left: 35px;
+} */
 
 /* .prod{
     width: 17.5rem;

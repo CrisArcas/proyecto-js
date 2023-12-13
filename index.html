@@ -22,14 +22,14 @@
                         Productos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mostrar Todos</a></li>
-                            <li><a class="dropdown-item" href="#">Calzado</a></li>
-                            <li><a class="dropdown-item" href="#">Indumentaria</a></li>
-                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                            <li><a class="dropdown-item" id="mostrarTodos" href="#">Mostrar Todos</a></li>
+                            <li><a class="dropdown-item" id="calzado" href="#">Calzado</a></li>
+                            <li><a class="dropdown-item" id="indumentaria" href="#">Indumentaria</a></li>
+                            <li><a class="dropdown-item" id="accesorios" href="#">Accesorios</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-cart2"></i> Carrito</a>
+                        <a class="nav-link active" id="contenedorCarrito" aria-current="page" href="#"><i class="bi bi-cart2"></i> Carrito <span class="numeroCarrito">0</span></a>
                     </li>
                 </ul>
             <form class="d-flex" role="search">
@@ -42,8 +42,7 @@
 
     <section id="divContenedor"></section>
 
-    <div id="sectionProductos"></div>
-
+    <section id="carritoContenedor" class="carrito-container"></section>
 
 
 
