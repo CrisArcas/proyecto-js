@@ -37,7 +37,7 @@ const MOSTRAR_PRODUCTOS = () => {
             <img src="${producto.img}" class="card-img-top imgProducto" alt="...">
                 <div class="card-body alig-items-center">
                     <h5 class="card-title text-light text-center">${producto.nombre}</h5>
-                    <h5 class="card-text text-light text-center">${producto.precio}</h5>
+                    <h5 class="card-text text-light text-center">$${producto.precio}</h5>
                     <button class="btn btn-primary mx-auto d-block" id="boton${producto.id}">COMPRAR</button>
                 </div>
             </div>
@@ -47,6 +47,18 @@ const MOSTRAR_PRODUCTOS = () => {
         const BOTON = document.getElementById(`boton${producto.id}`);
         BOTON.addEventListener("click", () =>{
         agregarCarrito(producto.id);
+        Swal.fire({
+            title: "Estás seguro que queres agregar este producto al carrito?",
+            icon: "question",
+            confirmButtonText: "aceptar",
+            showCancelButton: true,
+            cancelButtonText: "cancelar"
+        }).then ((result) => {
+            if(result.isConfirmed){
+            carrito = carrito.filter(producto => producto !== producto.nombre);
+            console.log(carrito);
+            }
+        })
         })
 
     });
